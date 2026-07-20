@@ -9,6 +9,11 @@ export default {
         accent: "#764abc", // Bright purple accent
         text: "#e0d4fc", // Light text
         "text-muted": "#9f86c0", // Muted text
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",

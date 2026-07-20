@@ -57,7 +57,13 @@ const StaggeredMenu = ({ items }) => {
             <motion.li key={item.id} variants={itemVariants}>
               <a
                 href={`#${item.id}`}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  setTimeout(() => {
+                    document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
                 className="block px-4 py-2 rounded-lg text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
               >
                 {item.label}
